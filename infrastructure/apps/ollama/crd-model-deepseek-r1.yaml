@@ -1,0 +1,13 @@
+apiVersion: ollama.ayaka.io/v1
+kind: Model
+metadata:
+  name: deepseek-r1-1_5b
+spec:
+  replicas: 2
+  image: deepseek-r1:1.5b
+  imagePullPolicy: IfNotPresent
+  storageClassName: local-path
+  # If you have your own PersistentVolumeClaim created
+  persistentVolumeClaim: ollama-pvc
+  persistentVolume:
+    accessMode: ReadWriteOnce
