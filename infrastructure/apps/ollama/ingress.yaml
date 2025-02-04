@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    haproxy.org/path-rewrite: /ollama/(.*) /\1
+    kubernetes.io/ingress.class: haproxy
+  name: ollama
+  namespace: ollama
+spec:
+  ingressClassName: haproxy
+  rules:
+  - host: master-srv1.local
+    http:
+      paths:
+      - backend:
+          service:
+            name: ollama
+            port:
+              number: 11434
+        path: /ollama
+        pathType: Prefix
