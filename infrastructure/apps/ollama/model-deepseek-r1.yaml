@@ -9,6 +9,7 @@ spec:
   imagePullPolicy: IfNotPresent
   storageClassName: local-path
   # If you have your own PersistentVolumeClaim created
-  persistentVolumeClaim: ollama-pvc
+  persistentVolumeClaim:
+    claimName: ollama-pvc
   persistentVolume:
     accessMode: ReadWriteOnce
