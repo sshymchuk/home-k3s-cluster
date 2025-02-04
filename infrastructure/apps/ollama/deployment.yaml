@@ -48,6 +48,21 @@ spec:
           periodSeconds: 5
           successThreshold: 1
           timeoutSeconds: 3
+        lifecycle:
+          postStart:
+            exec:
+              command:
+                - /bin/sh
+                - '-c'
+                - >
+                  while ! /bin/ollama ps > /dev/null 2>&1; do
+                    sleep 5
+                  done
+
+                  echo "deepseek-r1:1.5b deepseek-coder:1.3b" | xargs -n1
+                  /bin/ollama pull 
+
+                  echo "deepseek-r1:1.5b" | xargs -n1 /bin/ollama run
         resources: {}
         securityContext: {}
         terminationMessagePath: /dev/termination-log
