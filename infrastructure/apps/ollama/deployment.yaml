@@ -4,18 +4,64 @@ metadata:
   name: ollama
   namespace: ollama
 spec:
+  progressDeadlineSeconds: 600
+  replicas: 1
+  revisionHistoryLimit: 10
   selector:
     matchLabels:
-      name: ollama
+      app.kubernetes.io/instance: ollama
+      app.kubernetes.io/name: ollama
+  strategy:
+    type: Recreate
   template:
     metadata:
+      creationTimestamp: null
       labels:
-        name: ollama
+        app.kubernetes.io/instance: ollama
+        app.kubernetes.io/name: ollama
     spec:
       containers:
-      - name: ollama
-        image: ollama/ollama:latest
+      - image: ollama/ollama:0.5.7
+        imagePullPolicy: IfNotPresent
+        livenessProbe:
+          failureThreshold: 6
+          httpGet:
+            path: /
+            port: http
+            scheme: HTTP
+          initialDelaySeconds: 60
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 5
+        name: ollama
         ports:
-        - name: http
-          containerPort: 11434
+        - containerPort: 11434
+          name: http
           protocol: TCP
+        readinessProbe:
+          failureThreshold: 6
+          httpGet:
+            path: /
+            port: http
+            scheme: HTTP
+          initialDelaySeconds: 30
+          periodSeconds: 5
+          successThreshold: 1
+          timeoutSeconds: 3
+        resources: {}
+        securityContext: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /root/.ollama
+          name: ollama-data
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      serviceAccount: ollama
+      serviceAccountName: ollama
+      terminationGracePeriodSeconds: 30
+      volumes:
+      - emptyDir: {}
+        name: ollama-data

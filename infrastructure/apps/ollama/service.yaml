@@ -4,11 +4,17 @@ metadata:
   name: ollama
   namespace: ollama
 spec:
-  type: ClusterIP
-  selector:
-    name: ollama
   ports:
-  - port: 80
-    name: http
-    targetPort: http
-    protocol: TCP
+    - name: http
+      protocol: TCP
+      port: 11434
+      targetPort: http
+  selector:
+    app.kubernetes.io/instance: ollama
+    app.kubernetes.io/name: ollama
+  type: ClusterIP
+  sessionAffinity: None
+  ipFamilies:
+    - IPv4
+  ipFamilyPolicy: SingleStack
+  internalTrafficPolicy: Cluster
