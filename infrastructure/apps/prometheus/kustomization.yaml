@@ -1,0 +1,26 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - clickhouse-serviceMonitor.yaml
+  - kubernetesControlPlane-prometheusRule.yaml
+  - kubernetesControlPlane-serviceMonitorApiserver.yaml
+  - kubernetesControlPlane-serviceMonitorCoreDNS.yaml
+  - kubernetesControlPlane-serviceMonitorKubeControllerManager.yaml
+  - kubernetesControlPlane-serviceMonitorKubeScheduler.yaml
+  - kubernetesControlPlane-serviceMonitorKubelet.yaml
+  - monitoring.coreos.com-crd.yaml
+  - nodeExporter-clusterRole.yaml
+  - nodeExporter-clusterRoleBinding.yaml
+  - nodeExporter-daemonset.yaml
+  - nodeExporter-networkPolicy.yaml
+  - nodeExporter-prometheusRule.yaml
+  - nodeExporter-service.yaml
+  - nodeExporter-serviceAccount.yaml
+  - nodeExporter-serviceMonitor.yaml
+  - prometheus-additional.yaml
+  - prometheus-ingress.yaml
+  - prometheus-rules.yaml
+  - prometheus.yaml
+  - strimzi-pod-monitor.yaml
+
+namespace: prometheus
