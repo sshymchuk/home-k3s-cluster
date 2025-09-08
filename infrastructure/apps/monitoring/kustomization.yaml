@@ -1,7 +1,6 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-  - clickhouse-serviceMonitor.yaml
   - kubernetesControlPlane-prometheusRule.yaml
   - kubernetesControlPlane-serviceMonitorApiserver.yaml
   - kubernetesControlPlane-serviceMonitorCoreDNS.yaml
@@ -21,6 +20,5 @@ resources:
   - prometheus-ingress.yaml
   - prometheus-rules.yaml
   - prometheus.yaml
-  - strimzi-pod-monitor.yaml
 
-namespace: prometheus
+namespace: monitoring

@@ -43,7 +43,7 @@ roleRef:
 subjects:
   - kind: ServiceAccount
     name: prometheus-server
-    namespace: prometheus
+    namespace: monitoring
 
 ---
 apiVersion: monitoring.coreos.com/v1
@@ -68,7 +68,7 @@ spec:
       role: alert-rules
   alerting:
     alertmanagers:
-    - namespace: prometheus
+    - namespace: monitoring
       name: alertmanager
       port: alertmanager
   additionalScrapeConfigs:
