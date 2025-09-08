@@ -6,10 +6,10 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-    - http:
+    - host: master-srv1.local
+      http:
         paths:
-          - host: master-srv1.local
-            path: /prometheus
+          - path: /prometheus
             pathType: Prefix
             backend:
               service:
