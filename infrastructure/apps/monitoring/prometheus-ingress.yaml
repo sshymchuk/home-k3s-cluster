@@ -8,7 +8,8 @@ spec:
   rules:
     - http:
         paths:
-          - path: /prometheus
+          - host: master-srv1.local
+            path: /prometheus
             pathType: Prefix
             backend:
               service:
