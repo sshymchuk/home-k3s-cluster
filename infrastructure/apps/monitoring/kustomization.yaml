@@ -11,12 +11,12 @@ resources:
   - 0scrapeconfigCustomResourceDefinition.yaml
   - 0servicemonitorCustomResourceDefinition.yaml
   - 0thanosrulerCustomResourceDefinition.yaml
-  # - kubernetesControlPlane-prometheusRule.yaml
-  # - kubernetesControlPlane-serviceMonitorApiserver.yaml
-  # - kubernetesControlPlane-serviceMonitorCoreDNS.yaml
-  # - kubernetesControlPlane-serviceMonitorKubeControllerManager.yaml
-  # - kubernetesControlPlane-serviceMonitorKubeScheduler.yaml
-  # - kubernetesControlPlane-serviceMonitorKubelet.yaml
+  - kubernetesControlPlane-prometheusRule.yaml
+  - kubernetesControlPlane-serviceMonitorApiserver.yaml
+  - kubernetesControlPlane-serviceMonitorCoreDNS.yaml
+  - kubernetesControlPlane-serviceMonitorKubeControllerManager.yaml
+  - kubernetesControlPlane-serviceMonitorKubeScheduler.yaml
+  - kubernetesControlPlane-serviceMonitorKubelet.yaml
   - nodeExporter-clusterRole.yaml
   - nodeExporter-clusterRoleBinding.yaml
   - nodeExporter-daemonset.yaml
