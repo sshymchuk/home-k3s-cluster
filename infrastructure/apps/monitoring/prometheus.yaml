@@ -27,5 +27,5 @@ spec:
       name: alertmanager-main
       namespace: monitoring
       port: web
-  routePrefix: /dev/prometheus
-  externalUrl: http://evcms-lb1.evcms.local/dev/prometheus
+  routePrefix: /prometheus
+  externalUrl: http://*/prometheus
