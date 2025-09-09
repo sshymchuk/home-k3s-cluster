@@ -28,8 +28,8 @@ resources:
   - prometheus-clusterRole.yaml
   - prometheus-clusterRoleBinding.yaml
   - prometheus-ingress.yaml
-  # - prometheus-networkPolicy.yaml
-  # - prometheus-podDisruptionBudget.yaml
+  - prometheus-networkPolicy.yaml
+  - prometheus-podDisruptionBudget.yaml
   - prometheus-prometheus.yaml
   - prometheus-prometheusRule.yaml
   - prometheus-roleBindingConfig.yaml
