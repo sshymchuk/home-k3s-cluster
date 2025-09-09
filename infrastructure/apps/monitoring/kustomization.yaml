@@ -25,7 +25,6 @@ resources:
   # - nodeExporter-service.yaml
   # - nodeExporter-serviceAccount.yaml
   # - nodeExporter-serviceMonitor.yaml
-  # - prometheus.yaml
   - prometheus-clusterRole.yaml
   - prometheus-clusterRoleBinding.yaml
   - prometheus-ingress.yaml
@@ -38,7 +37,7 @@ resources:
   - prometheus-rules.yaml
   - prometheus-service.yaml
   - prometheus-serviceAccount.yaml
-  # - prometheus-serviceMonitor.yaml
+  - prometheus-serviceMonitor.yaml
   - prometheusOperator-clusterRole.yaml
   - prometheusOperator-clusterRoleBinding.yaml
   - prometheusOperator-deployment.yaml
