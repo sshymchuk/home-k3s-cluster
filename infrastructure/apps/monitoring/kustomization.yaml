@@ -25,20 +25,20 @@ resources:
   # - nodeExporter-service.yaml
   # - nodeExporter-serviceAccount.yaml
   # - nodeExporter-serviceMonitor.yaml
-  # - prometheus-clusterRole.yaml
-  # - prometheus-clusterRoleBinding.yaml
-  # - prometheus-ingress.yaml
-  # - prometheus-networkPolicy.yaml
-  # - prometheus-podDisruptionBudget.yaml
-  # - prometheus-prometheus.yaml
-  # - prometheus-prometheusRule.yaml
-  # - prometheus-roleBindingConfig.yaml
-  # - prometheus-roleConfig.yaml
-  # - prometheus-roleSpecificNamespaces.yaml
-  # - prometheus-rules.yaml
-  # - prometheus-service.yaml
-  # - prometheus-serviceAccount.yaml
-  # - prometheus-serviceMonitor.yaml
+  - prometheus-clusterRole.yaml
+  - prometheus-clusterRoleBinding.yaml
+  - prometheus-ingress.yaml
+  - prometheus-networkPolicy.yaml
+  - prometheus-podDisruptionBudget.yaml
+  - prometheus-prometheus.yaml
+  - prometheus-prometheusRule.yaml
+  - prometheus-roleBindingConfig.yaml
+  - prometheus-roleConfig.yaml
+  - prometheus-roleSpecificNamespaces.yaml
+  - prometheus-rules.yaml
+  - prometheus-service.yaml
+  - prometheus-serviceAccount.yaml
+  - prometheus-serviceMonitor.yaml
   - prometheusOperator-clusterRole.yaml
   - prometheusOperator-clusterRoleBinding.yaml
   - prometheusOperator-deployment.yaml
