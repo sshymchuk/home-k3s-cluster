@@ -1,13 +1,22 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
+  - 0alertmanagerConfigCustomResourceDefinition.yaml
+  - 0alertmanagerCustomResourceDefinition.yaml
+  - 0podmonitorCustomResourceDefinition.yaml
+  - 0probeCustomResourceDefinition.yaml
+  - 0prometheusCustomResourceDefinition.yaml
+  - 0prometheusagentCustomResourceDefinition.yaml
+  - 0prometheusruleCustomResourceDefinition.yaml
+  - 0scrapeconfigCustomResourceDefinition.yaml
+  - 0servicemonitorCustomResourceDefinition.yaml
+  - 0thanosrulerCustomResourceDefinition.yaml
   - kubernetesControlPlane-prometheusRule.yaml
   - kubernetesControlPlane-serviceMonitorApiserver.yaml
   - kubernetesControlPlane-serviceMonitorCoreDNS.yaml
   - kubernetesControlPlane-serviceMonitorKubeControllerManager.yaml
   - kubernetesControlPlane-serviceMonitorKubeScheduler.yaml
   - kubernetesControlPlane-serviceMonitorKubelet.yaml
-  - monitoring.coreos.com-crd.yaml
   - nodeExporter-clusterRole.yaml
   - nodeExporter-clusterRoleBinding.yaml
   - nodeExporter-daemonset.yaml
@@ -16,9 +25,29 @@ resources:
   - nodeExporter-service.yaml
   - nodeExporter-serviceAccount.yaml
   - nodeExporter-serviceMonitor.yaml
-  - prometheus-additional.yaml
+  - prometheus-clusterRole.yaml
+  - prometheus-clusterRoleBinding.yaml
   - prometheus-ingress.yaml
+  - prometheus-networkPolicy.yaml
+  - prometheus-podDisruptionBudget.yaml
+  - prometheus-prometheus.yaml
+  - prometheus-prometheusRule.yaml
+  - prometheus-roleBindingConfig.yaml
+  - prometheus-roleBindingSpecificNamespaces.yaml
+  - prometheus-roleConfig.yaml
+  - prometheus-roleSpecificNamespaces.yaml
   - prometheus-rules.yaml
-  - prometheus.yaml
+  - prometheus-service.yaml
+  - prometheus-serviceAccount.yaml
+  - prometheus-serviceMonitor.yaml
+  - prometheusOperator-clusterRole.yaml
+  - prometheusOperator-clusterRoleBinding.yaml
+  - prometheusOperator-deployment.yaml
+  - prometheusOperator-networkPolicy.yaml
+  - prometheusOperator-prometheusRule.yaml
+  - prometheusOperator-service.yaml
+  - prometheusOperator-serviceAccount.yaml
+  - prometheusOperator-serviceMonitor.yaml
+  - strimzi-pod-monitor.yaml
 
 namespace: monitoring
