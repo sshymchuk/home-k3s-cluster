@@ -34,7 +34,6 @@ resources:
   - prometheus-prometheusRule.yaml
   - prometheus-roleBindingConfig.yaml
   - prometheus-roleConfig.yaml
-  - prometheus-roleSpecificNamespaces.yaml
   - prometheus-rules.yaml
   - prometheus-service.yaml
   - prometheus-serviceAccount.yaml
