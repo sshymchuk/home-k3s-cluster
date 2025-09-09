@@ -13,6 +13,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: prometheus-operated
+                name: prometheus-k8s
                 port:
                   name: web
