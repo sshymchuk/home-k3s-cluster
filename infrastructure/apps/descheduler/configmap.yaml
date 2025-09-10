@@ -1,0 +1,32 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: descheduler-policy-configmap
+  namespace: kube-system
+data:
+  policy.yaml: |
+    apiVersion: "descheduler/v1alpha2"
+    kind: "DeschedulerPolicy"
+    metricsProviders:
+      - source: Prometheus
+        prometheus:
+          url: https://prometheus-operated.prometheus.svc.cluster.local:9090/dev/prometheus
+    profiles:
+      - name: ProfileName
+        pluginConfig:
+        - name: "DefaultEvictor"
+        - name: "RemoveDuplicates"
+        - name: "LowNodeUtilization"
+          args:
+            thresholds:
+              "memory": 50
+              "pods": 30
+            targetThresholds:
+              "memory": 80
+              "pods": 50
+        plugins:
+          balance:
+            enabled:
+              - "LowNodeUtilization"
+              - "RemoveDuplicates"
