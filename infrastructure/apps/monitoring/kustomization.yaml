@@ -12,6 +12,7 @@ resources:
   - 0servicemonitorCustomResourceDefinition.yaml
   - 0thanosrulerCustomResourceDefinition.yaml
   - alertmanager-alertmanager.yaml
+  - alertmanager-ingress.yaml
   # - alertmanager-networkPolicy.yaml
   - alertmanager-podDisruptionBudget.yaml
   - alertmanager-prometheusRule.yaml
