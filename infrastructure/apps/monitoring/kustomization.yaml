@@ -11,6 +11,25 @@ resources:
   - 0scrapeconfigCustomResourceDefinition.yaml
   - 0servicemonitorCustomResourceDefinition.yaml
   - 0thanosrulerCustomResourceDefinition.yaml
+  - alertmanager-alertmanager.yaml
+  # - alertmanager-networkPolicy.yaml
+  - alertmanager-podDisruptionBudget.yaml
+  - alertmanager-prometheusRule.yaml
+  - alertmanager-secret.yaml
+  - alertmanager-service.yaml
+  - alertmanager-serviceAccount.yaml
+  - alertmanager-serviceMonitor.yaml
+  - grafana-config.yaml
+  - grafana-dashboardDatasources.yaml
+  - grafana-dashboardDefinitions.yaml
+  - grafana-dashboardSources.yaml
+  - grafana-deployment.yaml
+  - grafana-ingress.yaml
+  # - grafana-networkPolicy.yaml
+  - grafana-prometheusRule.yaml
+  - grafana-service.yaml
+  - grafana-serviceAccount.yaml
+  - grafana-serviceMonitor.yaml
   - kubePrometheus-prometheusRule.yaml
   - kubernetesControlPlane-prometheusRule.yaml
   - kubernetesControlPlane-serviceMonitorApiserver.yaml
