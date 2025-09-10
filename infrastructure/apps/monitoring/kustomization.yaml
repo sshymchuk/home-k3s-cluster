@@ -12,7 +12,6 @@ resources:
   - 0servicemonitorCustomResourceDefinition.yaml
   - 0thanosrulerCustomResourceDefinition.yaml
   - alertmanager-alertmanager.yaml
-  - alertmanager-ingress.yaml
   # - alertmanager-networkPolicy.yaml
   - alertmanager-podDisruptionBudget.yaml
   - alertmanager-prometheusRule.yaml
@@ -20,12 +19,12 @@ resources:
   - alertmanager-service.yaml
   - alertmanager-serviceAccount.yaml
   - alertmanager-serviceMonitor.yaml
+  - common-ingress.yaml
   - grafana-config.yaml
   - grafana-dashboardDatasources.yaml
   - grafana-dashboardDefinitions.yaml
   - grafana-dashboardSources.yaml
   - grafana-deployment.yaml
-  - grafana-ingress.yaml
   # - grafana-networkPolicy.yaml
   - grafana-prometheusRule.yaml
   - grafana-service.yaml
@@ -48,7 +47,6 @@ resources:
   - nodeExporter-serviceMonitor.yaml
   - prometheus-clusterRole.yaml
   - prometheus-clusterRoleBinding.yaml
-  - prometheus-ingress.yaml
   # - prometheus-networkPolicy.yaml
   - prometheus-podDisruptionBudget.yaml
   - prometheus-prometheus.yaml
