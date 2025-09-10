@@ -1,3 +1,10 @@
+## Prometheus
+- https://github.com/prometheus-operator/kube-prometheus/tree/release-0.16 (Installed)
+
+# Ingress-Nginx
+- https://github.com/nginx/kubernetes-ingress/tree/v5.1.1 (Installed)
+- https://github.com/kubernetes/ingress-nginx/tree/release-1.13 (Not installed)
+
 ## Flux system repository
 ```sh
 flux install --components-extra image-reflector-controller,image-automation-controller --export > ./clusters/home-k3s/flux-system/gotk-components.yaml

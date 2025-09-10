@@ -11,6 +11,7 @@ resources:
   - 0scrapeconfigCustomResourceDefinition.yaml
   - 0servicemonitorCustomResourceDefinition.yaml
   - 0thanosrulerCustomResourceDefinition.yaml
+  - kubePrometheus-prometheusRule.yaml
   - kubernetesControlPlane-prometheusRule.yaml
   - kubernetesControlPlane-serviceMonitorApiserver.yaml
   - kubernetesControlPlane-serviceMonitorCoreDNS.yaml
@@ -46,6 +47,5 @@ resources:
   - prometheusOperator-service.yaml
   - prometheusOperator-serviceAccount.yaml
   - prometheusOperator-serviceMonitor.yaml
-  # - strimzi-pod-monitor.yaml
 
 namespace: monitoring
